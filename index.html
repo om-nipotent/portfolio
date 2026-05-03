@@ -1026,7 +1026,7 @@
       }
 
       .hero-visual {
-        width: 60%;
+        width: 50%;
         margin: 0 auto;
         order: -1;
       }
@@ -1062,17 +1062,19 @@
         top: 100%;
         left: 0;
         width: 100%;
-        background: var(--glass-bg);
+        background: var(--bg);
         backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
-        padding: 2rem;
+        padding: 1.5rem;
         border-radius: var(--radius-sm);
         border: 1px solid var(--glass-border);
         transform: translateY(10px);
         opacity: 0;
         pointer-events: none;
         transition: var(--transition);
-        gap: 1.5rem;
+        gap: 1rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
       }
 
       .nav-links.active {
@@ -1087,8 +1089,14 @@
 
       .navbar {
         top: 0.75rem;
-        margin: 0 1rem;
-        width: calc(100% - 2rem);
+        margin: 0 0.75rem;
+        width: calc(100% - 1.5rem);
+        padding: 0.75rem 1rem;
+      }
+
+      /* --- Container --- */
+      .container {
+        padding: 0 1.25rem;
       }
 
       /* --- Hero --- */
@@ -1099,28 +1107,50 @@
       }
 
       .hero-visual {
-        width: 55%;
+        width: 45%;
       }
 
       .typewriter-wrapper {
-        min-height: 80px;
+        min-height: 70px;
+        max-width: 100%;
+        overflow: hidden;
       }
 
       .typewriter {
-        font-size: clamp(2rem, 7vw, 3rem);
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+        word-break: break-word;
       }
 
       .hero p {
-        font-size: 1.05rem;
+        font-size: 1rem;
+        line-height: 1.6;
       }
 
       .btn {
-        padding: 0.85rem 2rem;
-        font-size: 0.95rem;
+        padding: 0.8rem 1.8rem;
+        font-size: 0.9rem;
       }
 
       .scroll-indicator {
         display: none;
+      }
+
+      /* --- Section Headers --- */
+      section {
+        padding: 3.5rem 0;
+      }
+
+      .section-header {
+        margin-bottom: 2rem;
+      }
+
+      .section-header h2 {
+        font-size: 1.75rem;
+      }
+
+      .section-subtitle {
+        font-size: 0.8rem;
+        letter-spacing: 1.5px;
       }
 
       /* --- Projects --- */
@@ -1130,22 +1160,31 @@
       }
 
       .project-img-wrapper {
-        height: 200px;
+        height: 180px;
       }
 
       .project-content {
-        padding: 1.5rem;
+        padding: 1.25rem;
       }
 
       .project-num {
-        font-size: 3rem;
-        top: -1.5rem;
-        right: 1.5rem;
+        font-size: 2.5rem;
+        top: -1.2rem;
+        right: 1.2rem;
+        opacity: 0.15;
+      }
+
+      .project-title {
+        font-size: 1.2rem;
+      }
+
+      .project-desc {
+        font-size: 0.9rem;
       }
 
       /* --- Timeline (single column, left-aligned) --- */
       .timeline::before {
-        left: 20px;
+        left: 14px;
       }
 
       .timeline-item,
@@ -1154,40 +1193,42 @@
       }
 
       .timeline-dot {
-        left: 20px;
+        left: 14px;
+        width: 10px;
+        height: 10px;
       }
 
       .timeline-content,
       .timeline-item:nth-child(even) .timeline-content {
-        width: calc(100% - 50px);
+        width: calc(100% - 40px);
         text-align: left;
       }
 
       .timeline-content {
-        padding: 1.5rem;
+        padding: 1.25rem;
+      }
+
+      .timeline-title {
+        font-size: 1.1rem;
+      }
+
+      .timeline-item {
+        margin-bottom: 1.5rem;
       }
 
       /* --- Contact --- */
       .contact-wrapper {
-        padding: 0 1rem;
+        padding: 0;
+      }
+
+      .form-control {
+        padding: 0.85rem 1rem;
       }
 
       /* --- Footer --- */
       footer {
-        margin-top: 2rem;
-      }
-
-      /* --- Sections --- */
-      section {
-        padding: 4rem 0;
-      }
-
-      .section-header {
-        margin-bottom: 2.5rem;
-      }
-
-      .section-header h2 {
-        font-size: 2rem;
+        margin-top: 1.5rem;
+        padding: 2rem 0;
       }
     }
 
@@ -1198,53 +1239,58 @@
       }
 
       /* --- Hero --- */
+      .hero {
+        padding-top: 4.5rem;
+      }
+
       .hero-visual {
-        width: 65%;
+        width: 55%;
       }
 
       .typewriter-wrapper {
-        min-height: 65px;
+        min-height: 55px;
       }
 
       .typewriter {
-        font-size: clamp(1.6rem, 8vw, 2.2rem);
+        font-size: clamp(1.4rem, 7vw, 1.9rem);
       }
 
       .greeting {
-        font-size: 0.8rem;
-        padding: 0.4rem 1rem;
-        margin-bottom: 1rem;
+        font-size: 0.75rem;
+        padding: 0.35rem 0.9rem;
+        margin-bottom: 0.8rem;
       }
 
       .hero p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         margin-bottom: 1.5rem;
       }
 
       .hero-btns {
         flex-direction: column;
         width: 100%;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
+        gap: 0.75rem;
       }
 
       .btn {
         width: 100%;
-        padding: 0.9rem 1.5rem;
-        font-size: 0.9rem;
+        padding: 0.85rem 1.5rem;
+        font-size: 0.85rem;
       }
 
       .tech-stack {
-        gap: 0.5rem;
+        gap: 0.4rem;
       }
 
       .tech-chip {
-        font-size: 0.75rem;
-        padding: 0.35rem 0.7rem;
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
       }
 
       /* --- Projects --- */
       .project-img-wrapper {
-        height: 160px;
+        height: 150px;
       }
 
       .project-img {
@@ -1252,81 +1298,106 @@
       }
 
       .project-content {
-        padding: 1.2rem;
+        padding: 1rem;
       }
 
       .project-title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
 
       .project-desc {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         margin-bottom: 1rem;
       }
 
       .project-tags span {
-        font-size: 0.7rem;
-        padding: 0.25rem 0.6rem;
+        font-size: 0.65rem;
+        padding: 0.2rem 0.55rem;
+      }
+
+      .project-tags {
+        margin-bottom: 1.2rem;
       }
 
       .project-num {
-        font-size: 2.5rem;
-        top: -1.2rem;
-        right: 1rem;
+        font-size: 2rem;
+        top: -1rem;
+        right: 0.8rem;
+        opacity: 0.1;
       }
 
       /* --- Skills --- */
       .skill-category {
-        padding: 1.5rem !important;
+        padding: 1.25rem !important;
       }
 
       .skill-category h3 {
-        font-size: 1.1rem;
-        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
       }
 
       .skill-info {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+      }
+
+      .skill-item {
+        margin-bottom: 1.2rem;
       }
 
       /* --- Timeline --- */
+      .timeline::before {
+        left: 10px;
+      }
+
+      .timeline-dot {
+        left: 10px;
+        width: 8px;
+        height: 8px;
+      }
+
+      .timeline-content,
+      .timeline-item:nth-child(even) .timeline-content {
+        width: calc(100% - 32px);
+      }
+
       .timeline-content {
-        padding: 1.2rem;
+        padding: 1rem;
       }
 
       .timeline-title {
-        font-size: 1.05rem;
+        font-size: 1rem;
       }
 
       .timeline-content p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
       }
 
       .timeline-date {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+      }
+
+      .timeline-org {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
       }
 
       /* --- Contact --- */
       .form-control {
-        padding: 0.85rem 1rem;
-        font-size: 0.9rem;
+        padding: 0.75rem 0.9rem;
+        font-size: 0.85rem;
       }
 
       .section-header h2 {
-        font-size: 1.7rem;
-      }
-
-      .section-subtitle {
-        font-size: 0.8rem;
+        font-size: 1.5rem;
       }
 
       /* --- Intro --- */
       .intro-title {
-        font-size: clamp(2rem, 8vw, 2.8rem);
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
       }
 
       .intro-subtitle {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
 
       /* --- Cursor glow hidden on touch --- */
@@ -1336,9 +1407,13 @@
 
       /* --- Social --- */
       .social-link {
-        width: 40px;
-        height: 40px;
+        width: 38px;
+        height: 38px;
         font-size: 1rem;
+      }
+
+      .social-links {
+        gap: 1rem;
       }
     }
   </style>
